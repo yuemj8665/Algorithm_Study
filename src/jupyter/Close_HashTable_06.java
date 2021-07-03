@@ -28,61 +28,67 @@ public class Close_HashTable_06 {
     }
 
     /**
-     *
+     * hashTable 데이터 추가 메소드
      * @param key
      * @param value
      * @return
      */
     public boolean saveData(String key, String value){
-        Integer address = this.hashFunc(key); // 키를 기반으로 주소를 검색한다.
-        if(this.hashTable[address] != null) { // 주소 검색하여 슬롯에 있을 떄
-            if (this.hashTable[address].key == key) {
-                this.hashTable[address].value = value;
+        Integer address = this.hashFunc(key);  
+        if(this.hashTable[address] != null) { // key의 인덱스를 찾았다면
+            if (this.hashTable[address].key == key) { // 그 key가 맞다면
+                this.hashTable[address].value = value; // key에 해당하는 value값 반환
                 return true;
-            } else {
-                Integer currAddress = address +1;
-                while (this.hashTable[currAddress] != null) {
-                    if (this.hashTable[currAddress].key == key) {
-                        this.hashTable[currAddress].value = value;
+            } else { // 해당 key가 아니라면
+                Integer currAddress = address +1; // 다음 인덱스로 
+                while (this.hashTable[currAddress] != null) { // 다음 인덱스 탐색 시작
+                    if (this.hashTable[currAddress].key == key) { // 다음 인덱스가 해당 key가 맞다면
+                        this.hashTable[currAddress].value = value; // key에 해당하는 value값 반환
                         return true;
                     } else {
-                        currAddress++;
-                        if (currAddress >= this.hashTable.length) {
-                            return false;
+                        currAddress++; // 인덱스에 해당하는 key가 아니라면 다음 인덱스로 이동
+                        if (currAddress >= this.hashTable.length) { // 다음 인덱스로 이동햇을때 hashTable의 최대 길이를 넘었다면
+                            return false; // 더이상 검색 할 위치가 없음으로 실패 반환
                         }
                     }
                 }
-                this.hashTable[currAddress] = new Slot(key, value);
+                // 다음 인덱스 탐색이 종료된 후 + hashTable의 최대길이에 도달하지 않았을 때
+                this.hashTable[currAddress] = new Slot(key, value); // 해당 인덱스에 새로운 슬롯을 생성하여 추가한다.
                 return true;
             }
-        } else {
-            this.hashTable[address] = new Slot(key,value);
+        } else { // key의 인덱스를 못 찾았다면
+            this.hashTable[address] = new Slot(key,value); // 해당 인덱스에 새로운 슬롯을 생성하여 추가한다.
         }
-
         return true;
     }
 
+    /**
+     * hashTable key에 해당하는 value값 검색하는 메소드
+     * @param key
+     * @return
+     */
     public String getData(String key) {
         Integer address = this.hashFunc(key);
-        if (this.hashTable[address] != null) {
-            if (this.hashTable[address].key == key) {
-                return this.hashTable[address].value;
-            } else {
-                Integer currAddress = address+1;
-                while (this.hashTable[currAddress] != null) {
-                    if (this.hashTable[currAddress].key == key) {
-                        return this.hashTable[currAddress].value;
+        if (this.hashTable[address] != null) { // key에 해당하는 인덱스를 찾음
+            if (this.hashTable[address].key == key) { // 해당 key가 검색하려는 key라면
+                return this.hashTable[address].value; // key에 해당하는 value값을 리턴
+            } else { // key에 해당하는 인덱스를 못찾았다면
+                Integer currAddress = address+1; // 다음 인덱스로 이동
+                while (this.hashTable[currAddress] != null) { // 다음 인덱스값이 존재한다면
+                    if (this.hashTable[currAddress].key == key) { // 해당 인덱스의 key값과 비교
+                        return this.hashTable[currAddress].value; // key에 해당하는 value값 리턴
                     } else {
-                        currAddress++;
-                        if (currAddress >= this.hashTable.length) {
-                            return null;
+                        currAddress++; // 인덱스에 해당하는 key가 아니라면 다음 인덱스로 이동
+                        if (currAddress >= this.hashTable.length) { // 다음 인덱스로 이동햇을때 hashTable의 최대 길이를 넘었다면
+                            return null; // 더이상 검색 할 위치가 없음으로 null 반환
                         }
                     }
                 }
-                return null;
+                // 한 바퀴를 돌았음에도 못찾았으면
+                return null; // null 반환
             }
-        } else {
-            return null;
+        } else { // 인덱스를 못찾았다면
+            return null; // null 반환
         }
     }
 
