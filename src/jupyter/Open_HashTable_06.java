@@ -1,8 +1,12 @@
 package jupyter;
 
-public class HashTable_06 {
+/**
+ * HashTable의 충돌(Collsion)을 방지하기 위한 Open Hasing 기법
+ * Linked List 자료구조를 활용한다.
+ */
+public class Open_HashTable_06 {
     public Slot[] hashTable;
-    public HashTable_06(Integer size){
+    public Open_HashTable_06(Integer size){
         this.hashTable = new Slot[size]; // 배열의 사이즈를 미리 할당 할 수 있도록 구성
     }
     
@@ -72,14 +76,14 @@ public class HashTable_06 {
         System.out.println(hashTable[0]);
 //        hashTable[0] = new Slot("value"); // 슬롯에 아이템을 넣어 주소값을 할당시킨다.
 
-        HashTable_06 hash = new HashTable_06(20);
+        Open_HashTable_06 hash = new Open_HashTable_06(20);
         hash.saveData("daveLee","010");
         hash.saveData("fun-coding","011");
         System.out.println(hash.getData("daveLee"));
 
         System.out.println("+========================================+");
 
-        HashTable_06 hashCollision = new HashTable_06(20);
+        Open_HashTable_06 hashCollision = new Open_HashTable_06(20);
         hashCollision.saveData("daveLee","1");
         hashCollision.saveData("daveLee","2");
         hashCollision.saveData("daveLee","3");
