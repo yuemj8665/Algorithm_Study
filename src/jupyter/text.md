@@ -255,3 +255,15 @@ ArrayList<Integer> list1 = new ArrayList<Integer>();
 <img src="https://www.mathwarehouse.com/programming/images/binary-search-tree/binary-search-tree-sorted-array-animation.gif" />
 
 (출처: https://www.mathwarehouse.com/programming/gifs/binary-search-tree.php#binary-search-tree-insertion-node)
+
+### 4. 시간 복잡도 (탐색 시)
+- depth(트리의 높이)를 h로 표기한다면 O(h)
+- n개의 노드를 가진다면, h - log2n에 가까우므로, 시간 복잡도는 O(log n)
+    - 참고 : 빅오 표기법에서 log n 에서의 log의 밑은 10이 아니라 2입니다.
+        - 한번 실행 시 마다, 50%의 실행할수도 있는 명령을 제거한다는 의미.
+        - 즉 50%의 실행시간을 단축시킬 수 있다는 것을 의미함.
+    
+### 5. 단점
+- 평균 시간 복잡도는 O(logn)이지만, 이는 트리가 균형잡혀있을때의 평군 시간복잡도이며,
+- 다음 예와 같이 구성되어있을 경우 최악의 경우에는 LinkedList 등과 동일한 성능을 보여준다(O(n))
+  <img src="http://www.fun-coding.org/00_Images/worstcase_bst.png" width="300" />

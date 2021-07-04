@@ -75,6 +75,141 @@ public class Tree_07 {
                 return null;
             }
         }
+
+        public boolean delete(int value) {
+            boolean searched = false;
+            Node currParentNode = this.head;
+            Node currNode = this.head;
+
+            if (this.head == null) { // 코너 케이스 1 : Node가 하나도 없을 때
+                return false;
+            } else { // 코너 케이스 2 : Node가 단지 하나만 있고, 해당 Node가 삭제 할 Node일때
+                if (this.head.value == value
+                        && this.head.left == null
+                        && this.head.right == null) {
+                    this.head = null;
+                    return true;
+                }
+            }
+            while (currNode != null) {
+                if (currNode.value == value) {
+                    searched = true;
+                    break;
+                } else if (value < currNode.value) {
+                    currParentNode = currNode;
+                    currNode = currNode.left;
+                } else {
+                    currParentNode = currNode;
+                    currNode = currNode.right;
+                }
+            }
+            if (searched == false) {
+                return false;
+            }
+            // 여기까지 실행 된다면
+            // currNode에는 해당 데이터를 가지고있는 Node,
+            // currParentNode에는 해당 데이터를 가지고있는 Node의 부모 Node가 된다.
+
+            // Case 1 : 삭제 할 Node가 leaf Node 인 경우,
+            if (currNode.left == null && currNode.right == null) {
+                if (value < currParentNode.value) {
+                    currParentNode.left = null;
+                    currNode = null;
+                } else {
+                    currParentNode.right = null;
+                    currNode = null;
+                }
+                return true;
+            } else if (currNode.left != null && currNode.right == null) {
+                // Case 2-1 : 삭제 할 Node가 Child Node를 한 개 가지고 있을 경우 (왼쪽에 있을 경우)
+                if (value < currNode.value) {
+                    currParentNode.left = currNode.left;
+                    currNode = null;
+                } else {
+                    currParentNode.right = currNode.left;
+                    currNode = null;
+                }
+                return true;
+            } else if (currNode.left == null && currNode.right != null) {
+                // Case 2-2 : 삭제 할 Node가 Child Node를 한 개 가지고 있을 경우 (오른쪽에 있을 경우)
+                if (value < currParentNode.value) {
+                    currParentNode.left = currNode.right;
+                    currNode = null;
+                } else {
+                    currParentNode.right = currNode.right;
+                    currNode = null;
+                }
+                return true;
+            }
+            // Case 3 : 삭제 할 Node가 Child Node를 두 개 가지고 있을 경우
+            // 전략 1. 삭제 할 Node의 오른쪽 자식 중, 가장 작은 값을 삭제할 Node의 Parent Node가 가리키도록 한다.
+            // 전략 2. 삭제 할 Node의 왼쪽 자식 중, 가장 큰 값을 삭제할 Node의 Parent Node가 가리키도록 한다.
+            // 강의에서는 전략 1을 가지고 설명하였다.
+
+            // Case 3-1 : 삭제 할 Node가 Parent Node의 왼쪽에 있고, 삭제 할 Node의 오른쪽 자식 중, 가장 작은 값을 가진 Node의 Child Node가 없을 때
+            else {
+                // 삭제 할 Node가 부모 Node의 왼쪽에 있을 때
+                if (value < currParentNode.value) {
+                    Node changeNode = currNode.right;
+                    Node changeParentNode = currNode.right;
+                    while (changeNode.left != null) {
+                        changeParentNode = changeNode;
+                        changeNode = changeNode.left;
+                    }
+                    // 여기까지 실해 된다면
+                    // changeNode에는 삭제 할 Node의 오른쪽 Node중에서 가장 작은 값을 가진 Node가 들어있게 됨
+                    // changeParentNode는 changeNode의 부모노드가 되어있음
+
+                    if (changeNode != null) {
+                        // Case 3-1-2 : changeNode의 오른쪽 child Node가 있을 때
+                        changeParentNode.left = changeNode.right;
+                    } else {
+                        // Case 3-1-1 : changeNode의 child Node가 없을 때
+                        changeParentNode.left = null;
+                    }
+
+                    // currParentNode의 왼쪽 child Node에 삭제 할 Node의 오른쪽 자식 중
+                    // 가장 작은 값을 가진 changeNode를 연결한다.
+                    currParentNode.left = changeNode;
+                    // parentNode의 왼쪽 child Node가 현재, changeNode이고,
+                    // changeNode의 왼쪽/오른쪽 Child Node를 모두 삭제할 currNode의 기존 왼쪽/오른쪽으로 변경한다.
+                    changeNode.right = currNode.right;
+                    changeNode.left = currNode.left;
+
+                    currNode = null;
+                }
+                // Case 3-2 : 삭제 할 Node가 Parent Node의 왼쪽에 있고, 삭제 할 Node의 오른쪽 자식 중, 가장 작은 값을 가진 Node의 Child Node가 있을 때
+                else {
+                    Node changeNode = currNode.right;
+                    Node changeParentNode = currNode.right;
+                    while (changeNode.left != null) {
+                        changeParentNode = changeNode;
+                        changeNode = changeNode.left;
+                    }
+                    // 여기까지 실해 된다면
+                    // changeNode에는 삭제 할 Node의 오른쪽 Node중에서 가장 작은 값을 가진 Node가 들어있게 됨
+                    // changeParentNode는 changeNode의 부모노드가 되어있음
+
+                    if (changeNode != null) {
+                        // Case 3-1-2 : changeNode의 오른쪽 child Node가 있을 때
+                        changeParentNode.left = changeNode.right;
+                    } else {
+                        // Case 3-1-1 : changeNode의 child Node가 없을 때
+                        changeParentNode.left = null;
+                    }
+
+                    // currParentNode의 오른쪽 child Node에 삭제 할 Node의 오른쪽 자식 중
+                    // 가장 작은 값을 가진 changeNode를 연결한다.
+                    currParentNode.right = changeNode;
+                    // parentNode의 왼쪽 child Node가 현재, changeNode이고,
+                    // changeNode의 왼쪽/오른쪽 Child Node를 모두 삭제할 currNode의 기존 왼쪽/오른쪽으로 변경한다.
+                    changeNode.right = currNode.right;
+                    changeNode.left = currNode.left;
+                    currNode = null;
+                }
+                return true;
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -86,13 +221,29 @@ public class Tree_07 {
          * 	모양의 이진 탐색 트리를 생성
          */
         NodeMgmt myTree = new NodeMgmt();
-        myTree.insertNode(2);
-        myTree.insertNode(3);
-        myTree.insertNode(4);
+        myTree.insertNode(10);
+        myTree.insertNode(15);
+        myTree.insertNode(13);
+        myTree.insertNode(11);
+        myTree.insertNode(14);
+        myTree.insertNode(18);
+        myTree.insertNode(16);
+        myTree.insertNode(19);
+        myTree.insertNode(17);
+        myTree.insertNode(7);
+        myTree.insertNode(8);
         myTree.insertNode(6);
+        System.out.println(myTree.delete(15));
+        System.out.println("HEAD: " + myTree.head.value);
+        System.out.println("HEAD LEFT: " + myTree.head.left.value);
+        System.out.println("HEAD LEFT LEFT: " + myTree.head.left.left.value);
+        System.out.println("HEAD LEFT RIGHT: " + myTree.head.left.right.value);
 
-        NodeMgmt.Node testNode = myTree.search(3);
-        System.out.println(testNode.value);
-        System.out.println(testNode.right.value);
+        System.out.println("HEAD RIGHT: " + myTree.head.right.value);
+        System.out.println("HEAD RIGHT LEFT: " + myTree.head.right.left.value);
+        System.out.println("HEAD RIGHT RIGHT: " + myTree.head.right.right.value);
+
+        System.out.println("HEAD RIGHT RIGHT LEFT: " + myTree.head.right.right.left.value);
+        System.out.println("HEAD RIGHT RIGHT RIGHT: " + myTree.head.right.right.right.value);
     }
 }
