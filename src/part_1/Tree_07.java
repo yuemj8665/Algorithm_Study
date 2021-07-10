@@ -1,4 +1,4 @@
-package jupyter;
+package part_1;
 
 public class Tree_07 {
     public static class NodeMgmt{

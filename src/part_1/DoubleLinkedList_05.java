@@ -1,4 +1,4 @@
-package jupyter;
+package part_1;
 
 public class DoubleLinkedList_05<T> {
     private static final String DUBBLELINE = "============================================";

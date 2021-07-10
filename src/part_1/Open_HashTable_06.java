@@ -1,4 +1,4 @@
-package jupyter;
+package part_1;
 
 /**
  * HashTable의 충돌(Collsion)을 방지하기 위한 Open Hasing 기법

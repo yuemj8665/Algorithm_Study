@@ -1,4 +1,4 @@
-package jupyter;
+package part_1;
 
 public class SingleLinkedList_04 {
     private static final String DUBBLELINE = "============================================";

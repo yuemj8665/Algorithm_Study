@@ -1,4 +1,4 @@
-package jupyter;
+package part_1;
 
 public class Collision_HashTable_06 {
     public Slot[] hashTable;
