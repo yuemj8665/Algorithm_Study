@@ -357,3 +357,68 @@ ArrayList<Integer> list1 = new ArrayList<Integer>();
     > 빅오 표기법을 생각해볼떄 고정 공간은 상수이므로 공간 복잡도는 가변공간에 좌우된다.
   > 입력 갯수에 따라서 고정 공간이 한계적으로 얼마나 늘어나느냐 기반으로 계산을 한다.
   > 
+## 10. 버블정렬
+### 0. 알고리즘 연습방법
+- 알고리즘을 잘 작성하기 위해서는 잘 작성된 알고리즘을 이해하고 스스로 만들어봐야 한다.
+    - 모사!  그림을 잘 그리기 위해서는 잘 그린 그림을 모방하는 것 부터 시작하는게 좋다.
+    > 이번 챕터부터 알고리즘의 시작
+  
+- 알고리즘 연습 방법
+1. 연습장과 펜을 준비
+2. 알고리즘 문제를 읽고 분석 한 뒤
+3. 간단하게 테스트용으로 매우 간단한 경우부터 복잡한 경우를 순서대로 생각해보면서 연습장과 펜을 이용하여 알고리즘을 분석한다.
+4. 가능한 알고리즘이 보인다면, 구현할 알고리즘을 세부 항목(Case)으로 나누고, 문장으로 세부항목을 나누어서 적는다.
+5. 코드화 하기 위해, 데이터 구조 또는 사용 할 변수를 정리
+6. 각 문자을 코드 레벨로 적는다
+7. 변수가 코드에 따라 어떻게 변하는지 손으로 적으면서 임의 데이터로 코드가 정상 동작하는지를 연습장과 펜으로 검증한다.
+> 분석을 잘 한다면 손코딩에서도 굉장히 유용하다.
+> 
+> 코딩 테스트는 오랜 고민 끝에 소스를 입력해야한다. 
+
+### 1. 정렬(Sorting) 이란?
+- 정렬(sorting) : 어떤 데이터들이 이를 정해진 순서대로 나열하는 것
+- 정렬은 프로그램 작성 시 빈번하게 필요로 한다.
+- 다양한 알고리즘이 고안되어있으며, 알고리즘 학습의 필수이다.
+
+###2. 버블 정렬이란?
+- 두 인접한 데이터를 비교해서 앞에 있는 데이터가 뒤에있는 데이터보다 크면, 자리를 바꾸는 정렬 알고리즘.
+
+###3. 어떻게 코드로 짜는가?
+> 알고리즘 연습 방법에 기반해서 단계별로 생각하기
+```java
+public static class BubbleSort{
+        /**
+         * 데이터가 4개 이상일때 버블정렬하기
+         * 특이점 :
+         * n개의 리스트가 있는 경우 최대 n-1번의 로직을 적용한다.
+         * 로직을 1번 적용할 때마다 가장 큰 숫자가 뒤에서부터 1개씩 결정된다.
+         * 로직이 경우에따라 일찍 끝날 수도있다.
+         * 따라서 로직을 적용할때 한번도 데이터가 교환된 적이 없다면 이미 정렬된 상태이므로 더이상 로직을 반복 적용할 필요가 없다.
+         *
+         * @param dataList
+         * @return
+         */
+        public ArrayList<Integer> sort(ArrayList<Integer> dataList) {
+            for (int i = 0; i < dataList.size() - 1; i++) {
+                boolean swap = false;
+                for (int index = 0; index < dataList.size() - 1 - i; index++) {
+                    if (dataList.get(index) > dataList.get(index + 1)) {
+                        Collections.swap(dataList,index,index+1);
+                        swap = true;
+                    }
+                }
+                if (swap == false) {
+                    break;
+                }
+            }
+            return dataList;
+        }
+    }
+```
+
+###4. 복잡도 계산하기
+- 반복문이 2개 O(n^2)
+  <img src="https://blogfiles.pstatic.net/MjAyMTA3MThfMjgg/MDAxNjI2NjE0ODcxNDI1.afG-SHEu-V2kFmdAGFzrnn0C0HoEapUFo5cwiiOUEIQg.FaXeRkEUPN7krreva6I8gNJgtd9IpppJpxsWzmGDkOYg.PNG.yuemj/%EB%B0%98%EB%B3%B5%EB%AC%B8%EC%9D%B4_2%EA%B0%9C.png?type=w1" />
+    - 최악의 경우 n(n-1)/2
+- 완전정렬이 되어있는 경우 O(n)
+> 버블 정렬을 알고리즘 연습 방법에 따라서 코드를 보지않고 연습하기.
