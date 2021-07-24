@@ -33,6 +33,11 @@ public class Selection_Sortring_3 {
             return datalist;
         }
 
+        /**
+         * 데이터가 3개 이상일떄 선택정렬
+         * @param datalist
+         * @return
+         */
         public ArrayList<Integer> mySortring3(ArrayList<Integer> datalist) {
             boolean sorting = false;
             int count = 0;
@@ -52,6 +57,24 @@ public class Selection_Sortring_3 {
             return datalist;
         }
 
+        /**
+         * 강의에서 만든 내용
+         * 차이점 : 내가 한 내용은 가장 작은 값을 비교한게 아닌 그냥 처음부터 끝까지 전부 비교했다.
+         * 효율성에서 떨어진다.
+         */
+        public ArrayList<Integer> sort(ArrayList<Integer> dataList){
+            int lowest; // 가장 작은 인덱스를 찾기 위해 변수선언
+            for (int stand = 0; stand < dataList.size() - 1; stand++) {
+                lowest = stand; // 가장 작은 숫자부터 인덱스 정렬을 위해 우선 가장 앞쪽에 lowest를 넣는다
+                for (int index = stand + 1; index < dataList.size(); index++) { // 이후 인덱스 시작부터 찾는다.
+                    if (dataList.get(lowest) > dataList.get(index)) { // 찾다가 현재 lowest가 가지고있는 값보다 작다면
+                        lowest = index; // lowest를 가지고온다.
+                    }
+                }
+                Collections.swap(dataList, lowest, stand); // 이후 swap
+            }
+            return dataList;
+        }
     }
 
 
@@ -106,6 +129,17 @@ public class Selection_Sortring_3 {
         System.out.println("sorting5 sotring5 전 : " + dataList5);
         sp.mySortring3(dataList5);
         System.out.println("sorting5 sotring5 후 : " + dataList5);
+
+        /**
+         * 100개의 List를 정렬한다.
+         */
+        ArrayList<Integer> testData = new ArrayList<Integer>();
+        for (int i = 0; i < 100; i++) {
+            testData.add((int)(Math.random() * 100));
+        }
+        SortringPractice sSort = new SortringPractice();
+        sSort.sort(testData);
+        System.out.println(testData);
 
     }
 }
