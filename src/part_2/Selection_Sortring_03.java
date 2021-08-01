@@ -3,7 +3,7 @@ package part_2;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Selection_Sortring_3 {
+public class Selection_Sortring_03 {
     public static class SortringPractice {
         /**
          * * 데이터가 두 개 일때

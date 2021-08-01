@@ -2,7 +2,7 @@ package part_2;
 
 import java.util.ArrayList;
 
-public class Recursive_call_5 {
+public class Recursive_call_05 {
     /**
      * 재귀용법의 이해
      * 예제를 풀어보며, 재귀용법을 이해해보기
@@ -115,7 +115,7 @@ public class Recursive_call_5 {
 
     public static void main(String[] args) {
 
-        Recursive_call_5 rc = new Recursive_call_5();
+        Recursive_call_05 rc = new Recursive_call_05();
         int testInt = rc.Recursive_call(5);
         System.out.println(testInt);
 
