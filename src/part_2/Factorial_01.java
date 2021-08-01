@@ -1,6 +1,6 @@
 package part_2;
 
-public class Factorial_1 {
+public class Factorial_01 {
     /**
      * 공간복잡도
      * n에 따라서 함수 전체의 크기는 변경되지않는다.
@@ -33,7 +33,7 @@ public class Factorial_1 {
     }
 
     public static void main(String[] args) {
-        Factorial_1 f = new Factorial_1();
+        Factorial_01 f = new Factorial_01();
 
         System.out.println(f.FactorialFunc1(5));
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class BubbleSorting_2 {
+public class BubbleSorting_02 {
     public static class BubbleSort{
         /**
          * 데이터가 4개 이상일때 버블정렬하기

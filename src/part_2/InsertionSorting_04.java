@@ -3,7 +3,7 @@ package part_2;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class InsertionSorting_4 {
+public class InsertionSorting_04 {
     public ArrayList<Integer> sort(ArrayList<Integer> dataList) {
         // 삽입 정렬은 두 번쨰 인덱스부터 정렬을 시작 하므로, 최종 인덱스의 -1번 회전시킨다.
         for (int index = 0; index < dataList.size() - 1; index++) {
@@ -25,7 +25,7 @@ public class InsertionSorting_4 {
         for (int i = 0; i < 100; i++) {
             dataList.add((int)(Math.random()*100));
         }
-        InsertionSorting_4 is = new InsertionSorting_4();
+        InsertionSorting_04 is = new InsertionSorting_04();
         is.sort(dataList);
         System.out.println(dataList);
     }
