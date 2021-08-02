@@ -9,14 +9,14 @@ public class MergeSort_07 {
      */
     // 배열을 앞 뒤 두 배열로 짜르는 코드 작성해보기
     public void splitArray(ArrayList<Integer> dataList) {
-        if (dataList.size() <= 1) {
-            return ;
+        if (dataList.size() <= 1) { // 자를게 없으므로 그냥 아무것도 안한다.
+            return ; // 바로 메소드 return 시켜서 종료한다.
         }
-        int medium = dataList.size() / 2;
+        int medium = dataList.size() / 2; // ArrayList를 절반으로 나누기 위해 인덱스를 결정한다.
         ArrayList<Integer> leftArr = new ArrayList<>();
         ArrayList<Integer> rightArr = new ArrayList<>();
 
-        // 0부터 medium-1 인덱스 번호까지 해당 배열 아이템을 서브 배열로 추출한다
+        // subList = 0부터 medium-1 인덱스 번호까지 해당 배열 아이템을 서브 배열로 추출한다
         leftArr = new ArrayList<Integer>(dataList.subList(0, medium));
         // 그리고 나머지 넣기
         rightArr = new ArrayList<Integer>(dataList.subList(medium, dataList.size()));
@@ -26,7 +26,6 @@ public class MergeSort_07 {
         }
 
     // mergeSplitFunc 메소드(재귀용법) 틀 만들기
-
     /**
      * 만약 배열 개수가 한개이면 해당 값 그대로 리턴
      * 그렇지 않으면 배열을 앞, 뒤로 나눈다.
@@ -45,9 +44,13 @@ public class MergeSort_07 {
         ArrayList<Integer> leftArr = new ArrayList<>();
         ArrayList<Integer> rightArr = new ArrayList<>();
 
+        // 중간까지는 기존에 만든 subList를 사용했지만,
+        // 이번건 반복하여 최대갯수로 쪼개기 위해 재귀함수를 사용한다.
+        // 재호출 재호출 재호출.. 함으로써 최대 갯수로 쪼개어 정렬을 한다.
         leftArr = this.mergeSplitFunc(new ArrayList<Integer>(dataList.subList(0, medium)));
         rightArr = this.mergeSplitFunc(new ArrayList<Integer>(dataList.subList(medium, dataList.size())));
 
+        // 로그 표출용 printf
         System.out.printf("mergeSplitFunc | leftArr  | %s \r\n",leftArr);
         System.out.printf("mergeSplitFunc | rightArr | %s \r\n",rightArr);
 
@@ -99,6 +102,7 @@ public class MergeSort_07 {
             rightPoint++;
         }
 
+        // 로그 표출용 printf
         System.out.printf("mergeFunc | mergedList | %s \r\n",mergedList);
         return mergedList;
     }
