@@ -1,7 +1,5 @@
 package review;
 
-import part_1.Tree_07;
-
 public class TreeReview {
     public static class nodeMGMT {
         Node head = null;
