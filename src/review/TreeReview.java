@@ -1,5 +1,7 @@
 package review;
 
+import part_1.Tree_07;
+
 public class TreeReview {
     public static class nodeMGMT {
         Node head = null;
@@ -147,8 +149,139 @@ public class TreeReview {
              * 3. 삭제 할 노드의 자식노드가 left, right 둘다 있다.
              */
 
-            return true;
+            // 1. 삭제 할 노드의 자식이 없다
+            if (currentNode.left == null && currentNode.right == null) {
+                if (data < currentParentNode.data) {
+                    currentParentNode.left = null;
+                    currentNode = null;
+                } else {
+                    currentParentNode.right = null;
+                    currentNode = null;
+                }
+                return true;
+                // 2. 삭제 할 노드의 자식노드가 있다.
+            } else if (currentNode.left != null && currentNode.right == null) { // 2-1 자식 노드가 left
+                // 이 부분은 약간 이해 할 수가 없음.
+                // currentNode.left에 노드가 있다고 하고 들어온게
+                // } else if (currentNode.left != null && currentNode.right == null) { <- 이 else if문인데,
+                // currentNode.left는 이진트리 특성상 무조건 currentPraentNode.right보다 작다는걸 의미함.
+                // 그럼 무조건 parentNode보다 높을 텐데..?
+                //
+                // 다시 생각해보니 parentNode.right도 currentNode가 될 수 있다는걸 알았다.
+                // 그렇게 생각하면 아래 소스가 맞는 것 같다.
+                // 역시 그림을 그려가면서 해야 이해가 빠르다.
+                if (data < currentParentNode.data) { // 삭제 할 데이터가 부모노드보다 작다면
+                    currentParentNode.left = currentNode.left;
+                    currentNode = null;
+                } else {
+                    currentParentNode.right = currentNode.left;
+                    currentNode = null;
+                }
+                return true;
+            } else if (currentNode.left == null && currentNode.right != null) {
+                if (data < currentParentNode.data) {
+                    currentParentNode.left = currentNode.right;
+                    currentNode = null;
+                } else {
+                    currentParentNode.right = currentNode.right;
+                    currentNode = null;
+                }
+                return true;
+            } else {
+                // 3. 삭제 할 노드의 자식노드가 left, right 둘다 있다.
+                // 3-1. currentNode가 ParentNode보다 작다면(왼쪽이라면),
+                // currentNode < data(삭제 노드보다 오른쪽 자식) 중 가장 작은 녀석을 ParentNode와 연결시킨다.
+                // 3-2. currentNode가 ParentNode보다 작다면(왼쪽이라면),
+                // currentNode > data(삭제 노드보다 왼쪽 자식) 중 가장 큰 녀석을 ParentNode와 연결 시킨다.
+
+                if (data < currentParentNode.data) { // 왼쪽에 있다
+                    // 3-1. currentNode가 ParentNode보다 작다면(왼쪽이라면),
+                    Node changeCurrentNode = currentNode.right;
+                    Node changeParentNode = currentNode.right;
+                    while (changeCurrentNode.left != null) {
+                        changeParentNode = changeCurrentNode;
+                        changeCurrentNode = changeCurrentNode.left;
+                    }
+                    // 이곳까지 전진하게 된다면,
+                    // changeCurrentNode에는 currentNode의 오른쪽 node중, 가장 작은 Node가 들어가게 된다.
+                    // changeParentNode에는 changeNode의 부모 node가 들어가있다.
+
+                    if (changeCurrentNode.right != null) { // 가장 작은 노드의 오른쪽 자식이 있다면,
+                        // 가장 작은 노드이기 때문에 left는 없을것이다.
+                        changeParentNode.left = changeCurrentNode.right;
+                    } else {
+                        changeCurrentNode.left = null;
+                    }
+
+                    // currentNode < data(삭제 노드보다 오른쪽 자식) 중 가장 작은 녀석을 ParentNode와 연결시킨다.
+                    currentParentNode.left = changeCurrentNode;
+                    changeCurrentNode.right = currentNode.right;
+                    changeCurrentNode.left = currentNode.left;
+
+                    currentNode = null;
+                } else {  // 3-2. currentNode가 ParentNode보다 작다면(왼쪽이라면),
+                    Node changeCurrentNode = currentNode.right;
+                    Node changeParentNode = currentNode.right;
+                    while (changeCurrentNode.left != null) {
+                        changeParentNode = changeCurrentNode;
+                        changeCurrentNode = changeCurrentNode.left;
+                    }
+
+                    // 이곳까지 전진하게 된다면,
+                    // changeCurrentNode에는 currentNode의 오른쪽 node중, 가장 작은 Node가 들어가게 된다.
+                    // changeParentNode에는 changeNode의 부모 node가 들어가있다.
+
+                    if (changeCurrentNode.right != null) { // 가장 작은 노드의 오른쪽 자식이 있다면,
+                        // 가장 작은 노드이기 때문에 left는 없을것이다.
+                        changeParentNode.left = changeCurrentNode.right;
+                    } else {
+                        changeCurrentNode.left = null;
+                    }
+
+                    // currentNode < data(삭제 노드보다 오른쪽 자식) 중 가장 작은 녀석을 ParentNode와 연결시킨다.
+                    currentParentNode.right = changeCurrentNode;
+                    changeCurrentNode.right = currentNode.right;
+                    changeCurrentNode.left = currentNode.left;
+
+                    currentNode = null;
+                }
+                return true;
+            }
         }
     }
 
+    public static void main(String[] args) {
+        /**
+         * 	2
+         * 		3
+         * 			4
+         * 				6
+         * 	모양의 이진 탐색 트리를 생성
+         */
+        nodeMGMT myTree = new nodeMGMT();
+        myTree.insertNode(10);
+        myTree.insertNode(15);
+        myTree.insertNode(13);
+        myTree.insertNode(11);
+        myTree.insertNode(14);
+        myTree.insertNode(18);
+        myTree.insertNode(16);
+        myTree.insertNode(19);
+        myTree.insertNode(17);
+        myTree.insertNode(7);
+        myTree.insertNode(8);
+        myTree.insertNode(6);
+        System.out.println(myTree.deleteNode(15));
+        System.out.println("HEAD: " + myTree.head.data);
+        System.out.println("HEAD LEFT: " + myTree.head.left.data);
+        System.out.println("HEAD LEFT LEFT: " + myTree.head.left.left.data);
+        System.out.println("HEAD LEFT RIGHT: " + myTree.head.left.right.data);
+
+        System.out.println("HEAD RIGHT: " + myTree.head.right.data);
+        System.out.println("HEAD RIGHT LEFT: " + myTree.head.right.left.data);
+        System.out.println("HEAD RIGHT RIGHT: " + myTree.head.right.right.data);
+
+        System.out.println("HEAD RIGHT RIGHT LEFT: " + myTree.head.right.right.left.data);
+        System.out.println("HEAD RIGHT RIGHT RIGHT: " + myTree.head.right.right.right.data);
+    }
 }
