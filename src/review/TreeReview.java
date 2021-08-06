@@ -47,7 +47,7 @@ public class TreeReview {
             } else { // 2. Node가 한개 이상 있었을 떄
                 Node node = this.head;
                 while (true) {
-                    if (node.data < data) { // 2-1 현재 노드보다 data가 작을 떄
+                    if (node.data > data) { // 2-1 현재 노드보다 data가 작을 떄
                         if (node.left != null) {
                             node = node.left;
                         } else {
