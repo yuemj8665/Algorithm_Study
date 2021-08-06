@@ -3,7 +3,7 @@ package part_2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class QuickSotring {
+public class QuickSotring_08 {
 
     public static class Split {
         public void splitFunc(ArrayList<Integer> dataList) {
