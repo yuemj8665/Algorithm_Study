@@ -793,3 +793,36 @@ function(입력) {
 </table>
 </div>
 
+
+## 18. 너비 우선 탐색(Breadth First Search)
+### 1] BFS란?
+- 대표적인 그래프 **탐색** 알고리즘
+    - 너비 우선 탐색(Breadth First Search) : 정점들과 같은 레벨에 있는 노드들(형제노드)을 먼저 탐색하는 방식
+    - 깊이 우선 탐식(Depth First Search) : 정점의 자식들을 먼저 탐색하는 방식
+    
+- BFS/DFS 방식을 위한 예제
+    - BFS : A-B-C-D-G-H-I-E-F-J
+        - 한 단계씩 내려가면서, 해당 노드와 같은 레벨에 있는 노드들을 먼저 순회함
+    - DFS : A-B-D-E-F-C-G-H-I-J
+        - 한 노드의 자식을 타고 끝까지 순회 한 뒤, 다시 돌아와서 다른 형제들의 자식을 타고 순회함
+<img src="https://www.fun-coding.org/00_Images/BFSDFS.png" width=700>
+          
+### 2] java로 표현하기?
+- HashMap과 ArrayList를 활용한다.
+- 인접한 노드들을 Key와 Value값으로 표현한다.
+  <img src="https://www.fun-coding.org/00_Images/bfsgraph.png" width=700>
+  
+### 3] BFS의 java 구현
+#### 1} 우선 두가지의 큐(quere)를 만든다.
+- visited : 방문한다. 탐색한 노드. 방문하는 노드의 순서를 저장한다.
+- needVisit : 탐색이 필요한 노드
+- 큐는 ArrayList를 사용하여 간단히 구현한다.
+
+### 4] 시간복잡도
+- 일반적인 BFS 시간복잡도
+    - 노드 수 V
+    - 간선 수 E
+        - 위 코드에서 while needVisit는 V+E번 수행한다.
+    - 시간 복잡도는 O(V+E)
+    - 전체 노드와 간선을 한번씩 훑기때문에 V+E이다.
+
