@@ -812,12 +812,16 @@ function(입력) {
 - 인접한 노드들을 Key와 Value값으로 표현한다.
   <img src="https://www.fun-coding.org/00_Images/bfsgraph.png" width=700>
   
-### 3] BFS의 java 구현
+### 3-1] BFS의 java 구현
 #### 1} 우선 두가지의 큐(quere)를 만든다.
 - visited : 방문한다. 탐색한 노드. 방문하는 노드의 순서를 저장한다.
 - needVisit : 탐색이 필요한 노드
 - 큐는 ArrayList를 사용하여 간단히 구현한다.
 
+### 3-2] DFS의 java 구현 (프로젝트: CH26_DFS)
+- 자료구조 스택과 큐를 활용함
+    - needVisit 스택과 visited 큐, 두 개의 자료 구조를 생성
+> BFS 자료구조는 두 개의 큐를 활용하는데 반해, DFS 는 스택과 큐를 활용한다는 차이가 있음을 인지해야 함
 ### 4] 시간복잡도
 - 일반적인 BFS 시간복잡도
     - 노드 수 V

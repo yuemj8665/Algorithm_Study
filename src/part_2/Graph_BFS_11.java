@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class BFS_11 {
+public class Graph_BFS_11 {
 
     /**
      * 우선 두가지의 큐(quere)를 만든다.
@@ -59,7 +59,7 @@ public class BFS_11 {
 
         System.out.println(aList);
 
-        BFS_11 bfs = new BFS_11();
+        Graph_BFS_11 bfs = new Graph_BFS_11();
         System.out.println(bfs.bfsFunc(graph, "A"));
     }
 }
