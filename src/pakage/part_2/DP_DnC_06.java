@@ -1,4 +1,4 @@
-package part_2;
+package pakage.part_2;
 
 public class DP_DnC_06 {
     /**
