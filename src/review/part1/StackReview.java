@@ -1,4 +1,4 @@
-package review;
+package review.part1;
 
 import java.util.ArrayList;
 

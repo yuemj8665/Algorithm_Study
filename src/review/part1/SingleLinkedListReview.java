@@ -1,4 +1,4 @@
-package review;
+package review.part1;
 
 public class SingleLinkedListReview {
     private static final String DUBBLELINE = "============================================";
