@@ -1,4 +1,4 @@
-package review;
+package review.part1;
 
 public class ArrayReview {
     public static final String dataset[] = {
