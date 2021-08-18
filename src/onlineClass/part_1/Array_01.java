@@ -1,4 +1,4 @@
-package pakage.part_1;
+package onlineClass.part_1;
 
 public class Array_01 {
     public static void main(String[] args) {
