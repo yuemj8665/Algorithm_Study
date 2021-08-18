@@ -1,4 +1,4 @@
-package pakage.part_2;
+package onlineClass.part_2;
 
 import java.util.ArrayList;
 import java.util.Collections;
