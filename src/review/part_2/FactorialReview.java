@@ -1,4 +1,4 @@
-package review.part2;
+package review.part_2;
 
 public class FactorialReview {
 }

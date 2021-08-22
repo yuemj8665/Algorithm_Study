@@ -1,4 +1,4 @@
-package review.part1;
+package review.part_1;
 
 public class TreeReview {
     public static class nodeMGMT {
