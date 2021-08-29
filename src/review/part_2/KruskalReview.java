@@ -80,7 +80,7 @@ public class KruskalReview {
 
         @Override
         public int compareTo(Edge o) {
-            return 0;
+            return this.weight - o.weight;
         }
     }
 
