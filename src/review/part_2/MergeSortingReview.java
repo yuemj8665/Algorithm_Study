@@ -60,15 +60,24 @@ public class MergeSortingReview {
         }
 
         int medium = dataList.size() / 2;
-        ArrayList<Integer> leftArr, rightArr;
+        ArrayList<Integer> leftArr = new ArrayList<>();
+        ArrayList<Integer> rightArr = new ArrayList<>();
 
-        leftArr = new ArrayList<>(dataList.subList(0, medium));
-        rightArr = new ArrayList<>(dataList.subList(medium, dataList.size()));
+        leftArr = this.mergeSplitFunc(new ArrayList<>(dataList.subList(0, medium)));
+        rightArr = this.mergeSplitFunc(new ArrayList<>(dataList.subList(medium, dataList.size())));
 
         return mergeFunc(leftArr, rightArr);
     }
 
     /**
+     * 목표: leftArr와 rightArr을 합쳐 mergedList을 만듦
+     * LeftArr와 rightArr은 이미 정렬된 상태, 혹은 하나의 인덱스를 가지고있다.
+     *
+     * 과정:
+     * leftpoint, rightpoint = 0;
+     * Case 1 : leftpoint, rightpoint가 둘 다 있을 때
+     * Case 2 : rightpoint만 없을 시, 나머지 leftList에 있는 데이터를 그대로 mergedList로 넣는다.
+     * Case 3 : leftpoint만 없을 시, 나머지 rightList에 있는 데이터를 그대로 mergedList로 넣는다.
      *
      * @param leftArr
      * @param rightArr
@@ -77,9 +86,44 @@ public class MergeSortingReview {
     public ArrayList<Integer> mergeFunc(ArrayList<Integer> leftArr, ArrayList<Integer> rightArr) {
         ArrayList<Integer> mergedList = new ArrayList<>();
 
+        int leftpoint = 0;
+        int rightpoint = 0;
 
+        // Case 1 : leftpoint, rightpoint가 둘 다 있을 때
+        while (leftArr.size() > leftpoint && rightArr.size() > rightpoint) {
+            // 작은 숫자를 먼저 추가시켜준다
+            if (leftArr.get(leftpoint) < rightArr.get(rightpoint)) {
+                mergedList.add(leftArr.get(leftpoint));
+                leftpoint++;
+            } else {
+                mergedList.add(rightArr.get(rightpoint));
+                rightpoint++;
+            }
+        }
 
-        return null;
+        // Case 2 : rightpoint만 없을 시, 나머지 leftList에 있는 데이터를 그대로 mergedList로 넣는다.
+        // 여기까지 왔으면 right가 없는 조건으로 while문 안으로 들어간다.
+        while (leftArr.size() > leftpoint) {
+            mergedList.add(leftArr.get(leftpoint));
+            leftpoint++;
+        }
+
+        while (rightArr.size() > rightpoint) {
+            mergedList.add(rightArr.get(rightpoint));
+            rightpoint++;
+        }
+
+        System.out.printf("mergefunc | mergedList | %s \r\n", mergedList);
+        return mergedList;
+    }
+
+    public static void main(String[] args) {
+        MergeSortingReview mergeSortingReview = new MergeSortingReview();
+        ArrayList<Integer> dataList = new ArrayList<>();
+        for (int i = 0; i < 8; i++) {
+            dataList.add((int) (Math.random() * 100));
+        }
+        mergeSortingReview.mergeSplitFunc(dataList);
     }
 
 
