@@ -45,8 +45,5 @@ public class BaekJoon_8958 {
             }
             System.out.println(total); // 마지막으로 total을 찍어준다.
         }
-
-
-
     }
 }

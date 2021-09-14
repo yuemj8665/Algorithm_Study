@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-15 BaekJoon_1546">
-      <change afterPath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BaekJoon_8958.java" afterDir="false" />
+    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-15 BaekJoon_8958">
+      <change afterPath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BaekJoon_15596.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BaekJoon_1546.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BaekJoon_1546.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BaekJoon_8958.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BaekJoon_8958.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,7 @@
       <workItem from="1630147472305" duration="138000" />
       <workItem from="1631349940866" duration="7934000" />
       <workItem from="1631621278955" duration="1411000" />
-      <workItem from="1631650120413" duration="3445000" />
+      <workItem from="1631650120413" duration="4167000" />
     </task>
     <task id="LOCAL-00001" summary="2021-07-18 BubbleSorting">
       <created>1626615078504</created>
@@ -223,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631652586685</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2021-09-15 BaekJoon_8958">
+      <created>1631653617552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631653617552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +265,8 @@
     <MESSAGE value="2021-07-18 BubbleSorting // 주석 추가" />
     <MESSAGE value="2021-09-14 BaekJoon_1546" />
     <MESSAGE value="2021-09-15 BaekJoon_1546" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021-09-15 BaekJoon_1546" />
+    <MESSAGE value="2021-09-15 BaekJoon_8958" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021-09-15 BaekJoon_8958" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
