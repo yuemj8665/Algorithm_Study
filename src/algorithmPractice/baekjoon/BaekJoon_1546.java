@@ -22,31 +22,29 @@ public class BaekJoon_1546 {
      * 첫째 줄에 새로운 평균을 출력한다. 실제 정답과 출력값의 절대오차 또는 상대오차가 10-2 이하이면 정답이다.
      */
 
-    public static class Solutions {
-        public void solutions_01() {
-            Scanner sc = new Scanner(System.in);
-            int subjectNumber = sc.nextInt();
-            int[] subjectScore = new int[subjectNumber];
-            int max = 0;
-            for (int i = 0; i < subjectScore.length; i++) {
-                subjectScore[i] = sc.nextInt();
-                if (subjectScore[i] > max) {
-                    max = subjectScore[i];
-                }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int subjectNumber = sc.nextInt();
+        int[] subjectScore = new int[subjectNumber];
+        int max = 0;
+        for (int i = 0; i < subjectScore.length; i++) {
+            subjectScore[i] = sc.nextInt();
+            if (subjectScore[i] > max) {
+                max = subjectScore[i];
             }
-            // 여기까지 오면 입력은 다 받았다.
-            int sum = 0;
-            int average = 0;
-            for (int i = 0; i < subjectScore.length; i++) {
-                 sum += subjectScore[i]/max*100;
-            }
-            average = sum / subjectNumber;
-
-            System.out.println(average);
+            System.out.println(subjectScore[i]);
+            System.out.println(max);
 
         }
-    }
-    public static void main(String[] args) {
+        System.out.println(subjectNumber);
 
+        // 여기까지 오면 입력은 다 받았다.
+        Double sum = 0.0;
+        Double[] newScore = new Double[subjectNumber];
+        for (int i = 0; i < subjectScore.length; i++) {
+            sum += (Double) (Double.valueOf(subjectScore[i])/max)*100;
+        }
+        Double average = sum/Double.valueOf(subjectNumber);
+        System.out.println(average);
     }
 }
