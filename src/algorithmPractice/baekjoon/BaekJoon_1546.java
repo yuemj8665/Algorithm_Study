@@ -42,7 +42,7 @@ public class BaekJoon_1546 {
         Double sum = 0.0;
         Double[] newScore = new Double[subjectNumber];
         for (int i = 0; i < subjectScore.length; i++) {
-            sum += (Double) (Double.valueOf(subjectScore[i])/max)*100;
+            sum += (Double) (Double.valueOf(subjectScore[i]/max))*100;
         }
         Double average = sum/Double.valueOf(subjectNumber);
         System.out.println(average);
