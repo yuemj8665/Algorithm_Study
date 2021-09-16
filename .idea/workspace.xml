@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-15 BaekJoon_15596">
-      <change afterPath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BaekJoon_4673.java" afterDir="false" />
+    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-16 BaekJoon_11654">
+      <change afterPath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BeakJoon_11720.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,22 +77,9 @@
       <recent name="E:\Development\dev\Workspace\Algorithm_Study\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BaekJoon_8958">
-    <configuration name="BaekJoon_1546" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_1546" />
-      <module name="intellij_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BaekJoon_2562" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_2562" />
+  <component name="RunManager" selected="Application.BeakJoon_11720">
+    <configuration name="BaekJoon_11654" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_11654" />
       <module name="intellij_Study" />
       <extension name="coverage">
         <pattern>
@@ -117,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InsertionSorting_04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="onlineClass.part_2.InsertionSorting_04" />
+    <configuration name="BeakJoon_11720" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BeakJoon_11720" />
       <module name="intellij_Study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="onlineClass.part_2.*" />
+          <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,26 +130,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration name="Practice_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.Practice_03" />
+      <module name="intellij_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BeakJoon_11720" />
+        <item itemvalue="Application.BaekJoon_11654" />
+        <item itemvalue="Application.Practice_03" />
         <item itemvalue="Application.BaekJoon_8958" />
         <item itemvalue="Application.Practice_02" />
-        <item itemvalue="Application.BaekJoon_1546" />
-        <item itemvalue="Application.InsertionSorting_04" />
-        <item itemvalue="Application.BaekJoon_2562" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +190,9 @@
       <workItem from="1630147472305" duration="138000" />
       <workItem from="1631349940866" duration="7934000" />
       <workItem from="1631621278955" duration="1411000" />
-      <workItem from="1631650120413" duration="5630000" />
+      <workItem from="1631650120413" duration="5661000" />
+      <workItem from="1631658374499" duration="155000" />
+      <workItem from="1631787788336" duration="3258000" />
     </task>
     <task id="LOCAL-00001" summary="2021-07-18 BubbleSorting">
       <created>1626615078504</created>
@@ -236,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631654436776</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2021-09-15 BaekJoon_4673 ...ing">
+      <created>1631656563037</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1631656563037</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2021-09-16 BaekJoon_11654">
+      <created>1631789050817</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631789050817</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +287,9 @@
     <MESSAGE value="2021-09-15 BaekJoon_1546" />
     <MESSAGE value="2021-09-15 BaekJoon_8958" />
     <MESSAGE value="2021-09-15 BaekJoon_15596" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021-09-15 BaekJoon_15596" />
+    <MESSAGE value="2021-09-15 BaekJoon_4673 ...ing" />
+    <MESSAGE value="2021-09-16 BaekJoon_11654" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021-09-16 BaekJoon_11654" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
