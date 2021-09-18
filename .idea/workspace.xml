@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-16 BaekJoon_11654">
-      <change afterPath="$PROJECT_DIR$/src/algorithmPractice/baekjoon/BeakJoon_11720.java" afterDir="false" />
+    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-16 BaekJoon_11720 ...ing">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-09-11__5_51__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-09-11_오후_5_51_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/onlineClass/part_2/text_part2.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/onlineClass/part_2/text_part2.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +45,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="Algorithm_04" />
-                    <option name="lastUsedInstant" value="1631622647" />
+                    <option name="branchName" value="Backtracking" />
+                    <option name="lastUsedInstant" value="1631968225" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1627818173" />
+                    <option name="lastUsedInstant" value="1631967976" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Algorithm_04" />
+                    <option name="lastUsedInstant" value="1631622647" />
                   </RecentBranch>
                 </list>
               </option>
@@ -77,7 +83,20 @@
       <recent name="E:\Development\dev\Workspace\Algorithm_Study\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BeakJoon_11720">
+  <component name="RunManager" selected="Application.BaekJoon_1546">
+    <configuration name="BaekJoon_10818" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_10818" />
+      <module name="Algorithm_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BaekJoon_11654" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_11654" />
       <module name="intellij_Study" />
@@ -91,8 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BaekJoon_8958" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_8958" />
+    <configuration name="BaekJoon_1546" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_1546" />
       <module name="intellij_Study" />
       <extension name="coverage">
         <pattern>
@@ -117,9 +136,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Practice_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.Practice_02" />
-      <module name="intellij_Study" />
+    <configuration name="Practice_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.Practice_01" />
+      <module name="Algorithm_Study" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="practice.*" />
@@ -130,37 +149,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Practice_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.Practice_03" />
-      <module name="intellij_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="practice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Practice_01" />
+        <item itemvalue="Application.BaekJoon_10818" />
+        <item itemvalue="Application.BaekJoon_1546" />
         <item itemvalue="Application.BeakJoon_11720" />
         <item itemvalue="Application.BaekJoon_11654" />
-        <item itemvalue="Application.Practice_03" />
-        <item itemvalue="Application.BaekJoon_8958" />
-        <item itemvalue="Application.Practice_02" />
       </list>
     </recent_temporary>
   </component>
@@ -298,11 +306,6 @@
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/onlineClass/part_2/InsertionSorting_04.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
