@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-16 BaekJoon_11720 ...ing">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-09-11__5_51__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-09-11_오후_5_51_[Default_Changelist]/shelved.patch" beforeDir="false" />
+    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-18 Backtracking">
+      <change afterPath="$PROJECT_DIR$/src/onlineClass/part_2/BackTracking_18.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/onlineClass/part_2/text_part2.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/onlineClass/part_2/text_part2.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +81,13 @@
       <recent name="E:\Development\dev\Workspace\Algorithm_Study\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BaekJoon_1546">
-    <configuration name="BaekJoon_10818" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_10818" />
-      <module name="Algorithm_Study" />
+  <component name="RunManager" selected="Application.BackTracking_18">
+    <configuration name="BackTracking_18" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="onlineClass.part_2.BackTracking_18" />
+      <module name="intellij_Study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
+          <option name="PATTERN" value="onlineClass.part_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,9 +95,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BaekJoon_11654" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_11654" />
-      <module name="intellij_Study" />
+    <configuration name="BaekJoon_10818" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_10818" />
+      <module name="Algorithm_Study" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
@@ -149,26 +147,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BackTracking_18" />
         <item itemvalue="Application.Practice_01" />
         <item itemvalue="Application.BaekJoon_10818" />
         <item itemvalue="Application.BaekJoon_1546" />
         <item itemvalue="Application.BeakJoon_11720" />
-        <item itemvalue="Application.BaekJoon_11654" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +197,7 @@
       <workItem from="1631650120413" duration="5661000" />
       <workItem from="1631658374499" duration="155000" />
       <workItem from="1631787788336" duration="3258000" />
+      <workItem from="1632054365599" duration="2341000" />
     </task>
     <task id="LOCAL-00001" summary="2021-07-18 BubbleSorting">
       <created>1626615078504</created>
@@ -258,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631789050817</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2021-09-18 Backtracking">
+      <created>1631969873541</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631969873541</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +301,8 @@
     <MESSAGE value="2021-09-15 BaekJoon_15596" />
     <MESSAGE value="2021-09-15 BaekJoon_4673 ...ing" />
     <MESSAGE value="2021-09-16 BaekJoon_11654" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021-09-16 BaekJoon_11654" />
+    <MESSAGE value="2021-09-18 Backtracking" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021-09-18 Backtracking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
