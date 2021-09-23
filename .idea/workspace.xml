@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-22 Brute_Force ...ing">
-      <change afterPath="$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15651.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/onlineClass/part_3/text_part3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15649.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15650.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15652.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15651.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15651.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,9 +92,35 @@
       <recent name="E:\Development\dev\Workspace\Algorithm_Study\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BOJ_15651">
+  <component name="RunManager" selected="Application.BOJ_15652">
+    <configuration name="BOJ_15649" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="onlineClass.part_3.part_01.BOJ_15649" />
+      <module name="intellij_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="onlineClass.part_3.part_01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BOJ_15651" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="onlineClass.part_3.part_01.BOJ_15651" />
+      <module name="intellij_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="onlineClass.part_3.part_01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BOJ_15652" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="onlineClass.part_3.part_01.BOJ_15652" />
       <module name="intellij_Study" />
       <extension name="coverage">
         <pattern>
@@ -117,32 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BaekJoon_10818" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_10818" />
-      <module name="Algorithm_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BaekJoon_1546" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_1546" />
-      <module name="intellij_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Practice_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="practice.Practice_01" />
       <module name="Algorithm_Study" />
@@ -156,26 +158,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BOJ_15652" />
+        <item itemvalue="Application.BOJ_15649" />
         <item itemvalue="Application.BOJ_15651" />
         <item itemvalue="Application.BackTracking_18" />
         <item itemvalue="Application.Practice_01" />
-        <item itemvalue="Application.BaekJoon_10818" />
-        <item itemvalue="Application.BaekJoon_1546" />
       </list>
     </recent_temporary>
   </component>
@@ -332,18 +332,10 @@
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15651.java</url>
-          <line>87</line>
-          <properties class="onlineClass.part_3.part_01.BOJ_15651" method="rec_func">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/onlineClass/part_3/part_01/BOJ_15651.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="3" />
+          <line>99</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
