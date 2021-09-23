@@ -90,8 +90,8 @@ public class BOJ_15651 {
             // selected[1...M] 배열이 새롭게 탐색 된 결과
             for (int i = 1; i <= M; i++) {
                 sb.append(selected[i]).append(' ');
-                sb.append('\n');
             }
+            sb.append('\n');
         } else { //
             for (int candidate = 1; candidate <= N; candidate++) {
                 selected[k] = candidate;
