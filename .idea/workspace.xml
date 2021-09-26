@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-23 Brute_Force">
-      <change afterPath="$PROJECT_DIR$/src/review/part_3/Review_BOJ_15652.java" afterDir="false" />
+    <list default="true" id="c0ac6647-fe3c-4552-9970-2f5052ed5201" name="Default Changelist" comment="2021-09-24 Brute_Force_Reivew">
+      <change afterPath="$PROJECT_DIR$/src/review/part_3/Review_BOJ_15649.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,20 +89,7 @@
       <recent name="E:\Development\dev\Workspace\Algorithm_Study\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Review_BOJ_15652">
-    <configuration name="BaekJoon_10818" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_10818" />
-      <module name="Algorithm_Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithmPractice.baekjoon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Review_BOJ_15649">
     <configuration name="BaekJoon_11654" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithmPractice.baekjoon.BaekJoon_11654" />
       <module name="intellij_Study" />
@@ -142,6 +129,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Review_BOJ_15649" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="review.part_3.Review_BOJ_15649" />
+      <module name="intellij_Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="review.part_3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Review_BOJ_15652" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="review.part_3.Review_BOJ_15652" />
       <module name="intellij_Study" />
@@ -155,26 +155,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Review_BOJ_15649" />
         <item itemvalue="Application.Review_BOJ_15652" />
         <item itemvalue="Application.Practice_01" />
         <item itemvalue="Application.BeakJoon_11720" />
         <item itemvalue="Application.BaekJoon_11654" />
-        <item itemvalue="Application.BaekJoon_10818" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +207,8 @@
       <workItem from="1631787788336" duration="3258000" />
       <workItem from="1632054365599" duration="2370000" />
       <workItem from="1632284923703" duration="5351000" />
-      <workItem from="1632488043390" duration="3386000" />
+      <workItem from="1632488043390" duration="3421000" />
+      <workItem from="1632637020307" duration="3128000" />
     </task>
     <task id="LOCAL-00001" summary="2021-07-18 BubbleSorting">
       <created>1626615078504</created>
@@ -288,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632398827088</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="2021-09-24 Brute_Force_Reivew">
+      <created>1632491475756</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1632491475756</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +337,8 @@
     <MESSAGE value="2021-09-19 Backtracking" />
     <MESSAGE value="2021-09-22 Brute_Force ...ing" />
     <MESSAGE value="2021-09-23 Brute_Force" />
-    <option name="LAST_COMMIT_MESSAGE" value="2021-09-23 Brute_Force" />
+    <MESSAGE value="2021-09-24 Brute_Force_Reivew" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021-09-24 Brute_Force_Reivew" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
